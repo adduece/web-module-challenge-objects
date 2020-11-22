@@ -111,7 +111,11 @@ const reviews = [
 		feedback:
 			'Absolutely love that they have karaoke Fridays! Food and drink selection is okay.',
 	},
-	{ name: 'Reyna', rating: 3.5, feedback: '' },
+	{
+		name: 'Reyna',
+		rating: 3.5,
+		feedback: '',
+	},
 ];
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -172,9 +176,13 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
-function getLastReview(/*Your code here*/) {
-	/*Your code here*/
+function getLastReview(review) {
+	let lastReviewArr = review[review.length - 1];
+	return `${lastReviewArr.name} gave the restaurant a ${lastReviewArr.rating} star review, and their 
+  feedback was: ${lastReviewArr.feedback}.`;
 }
+
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
@@ -191,10 +199,6 @@ Use the getReviewsByRating function below to do the following:
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
-
-function getReviewByRating(/* code here */) {
-	/* code here */
-}
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
 Use the getLongReviews function below to do the following:
